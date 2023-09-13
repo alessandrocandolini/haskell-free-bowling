@@ -1,3 +1,5 @@
+[![CI](https://github.com/alessandrocandolini/haskell-free-bowling/actions/workflows/ci.yml/badge.svg)](https://github.com/alessandrocandolini/haskell-free-bowling/actions/workflows/ci.yml) [![codecov](https://codecov.io/gh/alessandrocandolini/haskell-free-bowling/graph/badge.svg?token=hXPX4MFzdN)](https://codecov.io/gh/alessandrocandolini/haskell-free-bowling)
+
 # haskell-free-bowling
 
 ## How to build and run locally
