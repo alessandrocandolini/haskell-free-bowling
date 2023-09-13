@@ -11,7 +11,7 @@ dependencies:
 - optparse-applicative
 - optparse-generic
 - aeson
-- generic-aeson
+- refined
 
 default-extensions:
 - OverloadedStrings
