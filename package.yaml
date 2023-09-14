@@ -12,6 +12,7 @@ dependencies:
 - optparse-generic
 - aeson
 - refined
+- comonad
 
 default-extensions:
 - OverloadedStrings
