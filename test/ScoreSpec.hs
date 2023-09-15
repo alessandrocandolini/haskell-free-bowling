@@ -1,15 +1,16 @@
 {-# LANGUAGE OverloadedLists #-}
 module ScoreSpec where
 
-import Bowling
+import Outcome
+import Score
 import Test.Hspec
 import Test.Hspec.QuickCheck
 import Test.QuickCheck.Property
 import Test.QuickCheck
 import Data.List.NonEmpty
 
-scoreGen :: Score -> Gen Score
-scoreGen (Score max) = Score <$> chooseInt (0, max)
+scoreGen :: Int -> Gen Int
+scoreGen max = chooseInt (0, max)
 
 knockedDownGen :: Gen Outcome
 knockedDownGen = do
@@ -21,7 +22,7 @@ knockedDownsGen :: Gen (NonEmpty Outcome)
 knockedDownsGen = (:|) <$> knockedDownGen <*> listOf knockedDownGen
 
 frameResultGen ::  Gen Outcome
-frameResultGen = oneof [knockedDownGen, pure Strike, pure Spares]
+frameResultGen = oneof [knockedDownGen, pure Strike]
 
 
 spec :: Spec
