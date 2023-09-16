@@ -6,9 +6,5 @@ cradle:
     - path: "./app/Main.hs"
       component: "haskell-free-bowling:exe:haskell-free-bowling-exe"
 
-    - path: "./app/Paths_haskell-free-bowling.hs"
-      component: "haskell-free-bowling:exe:haskell-free-bowling-exe"
-
     - path: "./test"
       component: "haskell-free-bowling:test:haskell-free-bowling-test"
-
