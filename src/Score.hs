@@ -15,7 +15,6 @@ newtype Score = Score Int
   deriving (Show, Read, Ord, Num) via Int
   deriving (Semigroup, Monoid) via Sum Int
 
-
 totalScore :: NonEmpty Outcome -> Score
 totalScore = liftA2 (+) scores bonuses
 
@@ -24,8 +23,7 @@ scores = foldMap score
 
 score :: Outcome -> Score
 score Strike = pins
-score (Spare _ _ ) = pins
-score (KnockedDown s1 s2) = Score (s1 + s2)
+score (Roll (Pin s1) (Pin s2)) = Score (s1 + s2)
 
 bonuses :: NonEmpty Outcome -> Score
 bonuses = const 0
